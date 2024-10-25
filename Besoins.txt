@@ -1,0 +1,40 @@
+
+Les besoins fonctionnel  
+
+Gestion des projets
+
+        Création de projet : Les utilisateurs doivent pouvoir créer un projet en spécifiant un titre, une description, des dates importantes (début/fin), et des priorités.
+
+        Suivi des tâches : Ajouter, modifier et supprimer des tâches associées à un projet. Chaque tâche doit avoir un statut (à faire, en cours, terminé), une priorité, un responsable, et des dates d'échéance.
+
+        Assignation de membres : L’administrateur ou le gestionnaire de projet doit pouvoir ajouter des utilisateurs/membres à un projet ou une tâche spécifique.
+
+        Tableau de bord de projet : Un tableau de bord qui présente un aperçu des projets en cours, des tâches assignées et des échéances à venir.
+
+
+Gestion des utilisateurs
+
+Inscription et connexion : Un système d’authentification pour que les utilisateurs puissent s’inscrire et se connecter avec leur email .
+
+Rôles et permissions : Définir différents rôles (ex. : admin, chef de projet, collaborateur) avec des droits d’accès spécifiques. Par exemple, seuls les administrateurs peuvent supprimer des projets.
+
+
+Suivi du temps et des ressources
+
+Suivi du temps : Chaque membre peut enregistrer le temps passé sur une tâche ou un projet pour un meilleur suivi des efforts.
+
+
+Les besoins non fonctionnel ;
+
+    Performance : Le système doit répondre rapidement aux requêtes utilisateur, même avec un grand nombre de projets et de tâches.
+
+    Utilisabilité : L'interface utilisateur doit être intuitive et facile à prendre en main, même pour les utilisateurs non techniques.
+
+
+    Maintenabilité : Le code source doit être bien structuré et documenté pour faciliter les mises à jour et les évolutions futures.
+
+    Gestion des accès : Les utilisateurs doivent avoir des niveaux d'accès appropriés et ne pouvoir voir ou modifier que ce qui leur est autorisé selon leur rôle.
+
+    Guides et tutoriels : Prévoir des tutoriels ou une aide en ligne pour guider les utilisateurs dans l’utilisation des fonctionnalités principales.
+
+    Protection des données : Les données sensibles (comme les informations sur les projets et les utilisateurs) , et le site doit utiliser des pratiques de sécurité standard (HTTPS, protection des mots de passe, etc.).
