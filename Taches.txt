@@ -1,135 +1,152 @@
 Gestion des Projets
 
-Création de projet
-
- Définir la structure des données du projet (titre, description, dates, priorités).
- Créer un formulaire pour la création de projet avec les champs nécessaires.
- Implémenter la logique backend pour sauvegarder un projet dans la base de données.
- Configurer les validations de formulaire (champs requis, format de date, etc.).
- Afficher un message de confirmation lors de la création réussie du projet.
- Ajouter une gestion des erreurs en cas d’échec de création.
-
-
-Suivi des tâches
-
- Définir la structure des données de tâche (statut, priorité, responsable, date d’échéance).
- Créer un formulaire d’ajout de tâche avec les champs statut, priorité, responsable, et échéance.
- Mettre en place une API pour la gestion des tâches (ajout, modification, suppression).
- Développer la fonctionnalité d’assignation d’un responsable à chaque tâche.
- Afficher les tâches par statut (à faire, en cours, terminé) dans le frontend.
- Configurer les filtres et tris par priorité, responsable et échéance.
-
-Assignation de membres
-
- Créer une interface pour la gestion des membres d'un projet (ajouter, supprimer).
- Définir la structure de données de l'équipe de projet (liste de membres assignés).
- Implémenter la logique backend pour l'ajout de membres (affectation de rôles pour chaque membre).
- Vérifier les permissions d’accès pour restreindre cette action aux administrateurs ou gestionnaires.
- Afficher la liste des membres assignés à un projet et leurs rôles.
-
- 
-Tableau de bord de projet
-
-
- Créer un tableau de bord principal avec un aperçu des projets en cours.
- Afficher les tâches assignées par membre et leur statut respectif.
- Mettre en évidence les échéances à venir pour chaque projet.
- Configurer un indicateur de progression (ex. : pourcentage de tâches terminées par projet).
- Ajouter un filtre par projet et responsable pour une vue personnalisée.
-Gestion des Utilisateurs
-
-
-Inscription et connexion
-
- Configurer le système d'authentification avec email et mot de passe.
- Créer un formulaire d'inscription et de connexion utilisateur.
- Mettre en place des validations (ex. : email valide, mot de passe fort).
- Gérer la vérification des identifiants lors de la connexion.
- Afficher les messages d'erreur et de confirmation pour chaque action.
-
-
-Rôles et permissions
-
- Définir les différents rôles d’utilisateur (admin, chef de projet, collaborateur).
- Mettre en place un système de permissions basé sur les rôles pour les différentes actions.
- Restreindre les actions de suppression de projets aux administrateurs.
- Vérifier les permissions lors de l'accès aux projets et tâches.
- Gérer l'affichage des fonctionnalités selon le rôle de l’utilisateur connecté (ex. : seuls les admins voient les options de suppression).
-
-
-Suivi du Temps et des Ressources
-Suivi du temps
- Définir la structure de données pour le suivi du temps (heure de début, heure de fin, membre, tâche/projet).
- Créer un formulaire d'enregistrement de temps pour chaque tâche.
- Mettre en place une API pour enregistrer le temps passé par tâche et projet.
- Développer une vue pour afficher le temps total passé sur chaque projet.
- Afficher des rapports et statistiques de temps pour faciliter le suivi des efforts.
- Ajouter des filtres de visualisation par membre et par tâche pour voir le détail du temps passé.
-
-
-
- // Organisation des dependance 
-
 Étape 1 : Création de projet
 
-
- 1.1 Définir la structure des données du projet (Aucune dépendance).
-1.2 Créer un formulaire pour la création de projet (Dépend de 1.1).
-1.3 Implémenter la logique backend pour sauvegarder un projet (Dépend de 1.1).
-1.4 Configurer les validations de formulaire (Dépend de 1.2).
-1.5 Ajouter la gestion des erreurs et des messages de confirmation (Dépend de 1.3 et 1.4).
-
+1.1. Définir la structure des données du projet (titre, description, dates, priorités). (Aucune dépendance)
+1.2. Créer un formulaire pour la création de projet avec les champs nécessaires (Dépend de 1.1)
+1.3. Implémenter la logique backend pour sauvegarder un projet dans la base de données (Dépend de 1.1)
+1.4. Configurer les validations de formulaire (champs requis, format de date, etc.) (Dépend de 1.2)
+1.5. Ajouter la gestion des erreurs et des messages de confirmation lors de la création réussie du projet (Dépend de 1.3 et 1.4)
 
 Étape 2 : Suivi des tâches
 
-2.1 Définir la structure des données de tâche (Dépend de 1.1).
-2.2 Créer un formulaire pour l'ajout de tâche (Dépend de 2.1).
-2.3 Implémenter la logique backend pour la gestion des tâches (ajout, modification, suppression) (Dépend de 2.1).
-2.4 Développer la fonctionnalité d'assignation d'un responsable à une tâche (Dépend de 2.3).
-2.5 Configurer l’affichage des tâches par statut dans le frontend (Dépend de 2.4).
-2.6 Ajouter des filtres et tris par priorité, responsable et échéance (Dépend de 2.5).
-
+2.1. Définir la structure des données de tâche (statut, priorité, responsable, date d’échéance) (Dépend de 1.1)
+2.2. Créer un formulaire d’ajout de tâche avec les champs statut, priorité, responsable, et échéance (Dépend de 2.1)
+2.3. Implémenter la logique backend pour la gestion des tâches (ajout, modification, suppression) (Dépend de 2.1)
+2.4. Développer la fonctionnalité d’assignation d’un responsable à une tâche (Dépend de 2.3)
+2.5. Configurer l’affichage des tâches par statut (à faire, en cours, terminé) dans le frontend (Dépend de 2.4)
+2.6. Ajouter des filtres et tris par priorité, responsable et échéance (Dépend de 2.5)
 
 Étape 3 : Assignation de membres
 
-3.1 Créer une interface pour la gestion des membres d'un projet (Dépend de 1.1).
-3.2 Définir la structure de données de l'équipe de projet (Dépend de 1.1).
-3.3 Implémenter la logique backend pour l'ajout de membres avec leurs rôles (Dépend de 3.2).
-3.4 Vérifier les permissions d’accès pour restreindre cette action aux administrateurs ou gestionnaires (Dépend de 3.3).
-3.5 Afficher la liste des membres assignés à un projet et leurs rôles (Dépend de 3.3).
-
+3.1. Créer une interface pour la gestion des membres d'un projet (ajouter, supprimer) (Dépend de 1.1)
+3.2. Définir la structure de données de l'équipe de projet (liste de membres assignés) (Dépend de 1.1)
+3.3. Implémenter la logique backend pour l'ajout de membres avec leurs rôles (Dépend de 3.2)
+3.4. Vérifier les permissions d’accès pour restreindre cette action aux administrateurs ou gestionnaires (Dépend de 3.3)
+3.5. Afficher la liste des membres assignés à un projet et leurs rôles (Dépend de 3.3)
 
 Étape 4 : Tableau de bord de projet
 
-4.1 Créer un tableau de bord principal avec un aperçu des projets (Dépend de 1.1).
-4.2 Afficher les tâches assignées par membre et leur statut (Dépend de 2.5 et 3.5).
-4.3 Mettre en évidence les échéances à venir pour chaque projet (Dépend de 2.6).
-4.4 Configurer un indicateur de progression (ex. : pourcentage de tâches terminées) (Dépend de 4.2).
-4.5 Ajouter un filtre par projet et responsable pour une vue personnalisée (Dépend de 4.1).
+4.1. Créer un tableau de bord principal avec un aperçu des projets en cours (Dépend de 1.1)
+4.2. Afficher les tâches assignées par membre et leur statut respectif (Dépend de 2.5 et 3.5)
+4.3. Mettre en évidence les échéances à venir pour chaque projet (Dépend de 2.6)
+4.4. Configurer un indicateur de progression (ex. : pourcentage de tâches terminées par projet) (Dépend de 4.2)
+4.5. Ajouter un filtre par projet et responsable pour une vue personnalisée (Dépend de 4.1)
+
 Gestion des Utilisateurs
 
-
 Étape 1 : Inscription et connexion
-
-1.1 Configurer le système d'authentification (Aucune dépendance).
-1.2 Créer un formulaire d'inscription et de connexion utilisateur (Dépend de 1.1).
-1.3 Mettre en place des validations (email, mot de passe, etc.) (Dépend de 1.2).
-1.4 Gérer la vérification des identifiants lors de la connexion (Dépend de 1.1).
-1.5 Ajouter les messages d'erreur et de confirmation (Dépend de 1.3 et 1.4).
-
+1.1. Configurer le système d'authentification avec email et mot de passe (Aucune dépendance)
+1.2. Créer un formulaire d'inscription et de connexion utilisateur (Dépend de 1.1)
+1.3. Mettre en place des validations (ex. : email valide, mot de passe fort) (Dépend de 1.2)
+1.4. Gérer la vérification des identifiants lors de la connexion (Dépend de 1.1)
+1.5. Afficher les messages d'erreur et de confirmation pour chaque action (Dépend de 1.3 et 1.4)
 
 Étape 2 : Rôles et permissions
+2.1. Définir les différents rôles d’utilisateur (admin, chef de projet, collaborateur) (Dépend de 1.1)
+2.2. Mettre en place un système de permissions basé sur les rôles pour les différentes actions (Dépend de 2.1)
+2.3. Restreindre les actions de suppression de projets aux administrateurs (Dépend de 2.2)
+2.4. Vérifier les permissions lors de l'accès aux projets et tâches (Dépend de 2.2)
+2.5. Gérer l'affichage des fonctionnalités selon le rôle de l’utilisateur connecté (ex. : seuls les admins voient les options de suppression) (Dépend de 2.3 et 2.4)
 
-2.1 Définir les rôles d’utilisateur (admin, chef de projet, collaborateur) (Dépend de 1.1).
-2.2 Mettre en place un système de permissions basé sur les rôles (Dépend de 2.1).
-2.3 Configurer l'accès en écriture/suppression de projets aux seuls administrateurs (Dépend de 2.2).
-2.4 Vérifier les permissions lors de l'accès aux projets et tâches (Dépend de 2.2).
-2.5 Configurer l'affichage des fonctionnalités spécifiques par rôle (Dépend de 2.3 et 2.4).
 Suivi du Temps et des Ressources
+
 Étape 1 : Suivi du temps
-1.1 Définir la structure de données pour le suivi du temps (Dépend de 2.1 des tâches de projet).
-1.2 Créer un formulaire d'enregistrement de temps pour chaque tâche (Dépend de 1.1).
-1.3 Mettre en place une API pour enregistrer le temps par tâche/projet (Dépend de 1.1).
-1.4 Développer une vue pour afficher le temps total passé par projet (Dépend de 1.3).
-1.5 Afficher des rapports et statistiques de temps (Dépend de 1.4).
-1.6 Ajouter des filtres de visualisation par membre et par tâche (Dépend de 1.5).
+1.1. Définir la structure de données pour le suivi du temps (heure de début, heure de fin, membre, tâche/projet) (Dépend de 2.1 des tâches de projet)
+1.2. Créer un formulaire d'enregistrement de temps pour chaque tâche (Dépend de 1.1)
+1.3. Mettre en place une API pour enregistrer le temps passé par tâche et projet (Dépend de 1.1)
+1.4. Développer une vue pour afficher le temps total passé sur chaque projet (Dépend de 1.3)
+1.5. Afficher des rapports et statistiques de temps pour faciliter le suivi des efforts (Dépend de 1.4)
+1.6. Ajouter des filtres de visualisation par membre et par tâche pour voir le détail du temps passé (Dépend de 1.5)
+
+1. Gestion des Tests
+
+Création de cas de tests
+
+1.1 Définir la structure de données pour les cas de tests (indépendant).
+1.2 Documenter les cas de tests pour chaque fonctionnalité (dépend de 1.1).
+1.3 Créer une interface pour ajouter et consulter des cas de tests (dépend de 1.2).
+
+Exécution des tests
+
+2.1 Développer la fonctionnalité pour exécuter les cas de tests (dépend de 1.3).
+2.2 Créer une interface pour lancer l’exécution des tests (dépend de 2.1).
+2.3 Stocker les résultats des tests dans une base de données (dépend de 2.1).
+
+Suivi des résultats des tests
+
+3.1 Définir un modèle de données pour enregistrer les résultats des tests (dépend de 2.3).
+3.2 Créer une vue pour consulter les résultats des tests par statut (succès/échec) (dépend de 3.1).
+3.3 Mettre en place des filtres pour consulter les tests par date ou par statut (dépend de 3.2).
+
+
+Intégration avec un outil de gestion des bugs
+
+4.1 Configurer un lien entre les échecs de tests et les bugs (dépend de 2.3 et 3.1).
+4.2 Créer une vue pour visualiser les bugs associés aux échecs de tests (dépend de 4.1).
+4.3 Développer une API ou intégration pour lier automatiquement les échecs de tests à des bugs (dépend de 4.1).
+2. Gestion des Issues
+
+Création et édition d'issues
+
+1.1 Définir la structure de données pour les issues (indépendant).
+1.2 Créer une interface pour l’ajout et l’édition des issues (bugs, améliorations, etc.) (dépend de 1.1).
+1.3 Mettre en place un formulaire de création et de modification d’issues (dépend de 1.2).
+
+Classification des issues
+
+2.1 Ajouter des champs de classification pour type, priorité et statut dans la structure de données (dépend de 1.1).
+2.2 Implémenter la logique de classification dans l’interface d'issues (dépend de 2.1).
+2.3 Ajouter des filtres dans l’interface pour classer les issues par type, priorité, et statut (dépend de 2.2).
+
+Attribution des issues
+
+3.1 Ajouter un champ de responsable dans la structure de données des issues (dépend de 1.1).
+3.2 Permettre l’assignation des issues aux membres de l’équipe dans l’interface (dépend de 3.1).
+3.3 Configurer une notification pour avertir les membres assignés (dépend de 3.2).
+
+Historique des modifications
+
+4.1 Mettre en place un système d’historique pour suivre les modifications des issues (dépend de 1.1 et 1.2).
+4.2 Afficher l’historique des modifications dans chaque issue (dépend de 4.1).
+
+Intégration avec un suivi des versions
+
+5.1 Développer une intégration entre les versions et les issues (dépend de 1.1).
+5.2 Permettre de lier des issues spécifiques à des versions (dépend de 5.1).
+5.3 Créer une vue qui montre toutes les issues associées à une version (dépend de 5.2).
+3. Gestion des Releases
+
+Planification des releases
+
+1.1 Définir une structure de données pour les releases (indépendant).
+1.2 Créer un formulaire pour planifier les releases et définir les priorités (dépend de 1.1).
+1.3 Ajouter la logique de planification en fonction des dates et priorités des releases (dépend de 1.2).
+
+Définition du contenu de chaque release
+
+2.1 Associer des issues et tâches aux releases dans la structure de données (dépend de 1.1).
+2.2 Ajouter des fonctionnalités de gestion de contenu dans l’interface de releases (dépend de 2.1).
+2.3 Afficher la liste des issues et tâches dans chaque release (dépend de 2.2).
+
+Suivi de l'avancement des releases
+
+3.1 Développer un indicateur de progression pour chaque release (dépend de 2.3).
+3.2 Afficher l’état d’avancement des releases dans le tableau de bord (dépend de 3.1).
+3.3 Configurer des alertes pour les releases proches de l’échéance (dépend de 3.2).
+
+Publication des releases
+
+4.1 Créer une interface pour publier les releases (dépend de 3.1).
+4.2 Mettre en place un système de notification pour informer les équipes de la publication (dépend de 4.1).
+4.3 Marquer les releases publiées comme “finalisées” et archiver les tâches et issues résolues (dépend de 4.1).
+
+Notes de version associées
+
+5.1 Créer une section pour documenter les modifications dans chaque release (dépend de 2.1).
+5.2 Rédiger et stocker les notes de version pour chaque release (dépend de 5.1).
+5.3 Afficher les notes de version dans le tableau de bord des releases (dépend de 5.2).
+
+
+
+

@@ -1,40 +1,56 @@
+## Besoins Fonctionnels
 
-Les besoins fonctionnel  
+### Gestion des Projets
 
-Gestion des projets
+1. **Création de projet** : Permettre aux utilisateurs de créer un projet avec les informations essentielles (titre, description, dates de début/fin, priorités).
+2. **Suivi des tâches** :  
+    - Ajouter, modifier et supprimer des tâches associées à un projet.
+    - Attribuer à chaque tâche un statut (à faire, en cours, terminé), une priorité, un responsable et des dates d'échéance.
+3. **Assignation de membres** : Autoriser les administrateurs ou les gestionnaires de projet à assigner des membres à des projets ou des tâches spécifiques.
+4. **Tableau de bord de projet** : Présenter une vue d’ensemble des projets en cours, des tâches assignées et des échéances à venir.
 
-        Création de projet : Les utilisateurs doivent pouvoir créer un projet en spécifiant un titre, une description, des dates importantes (début/fin), et des priorités.
+### Gestion des Utilisateurs
 
-        Suivi des tâches : Ajouter, modifier et supprimer des tâches associées à un projet. Chaque tâche doit avoir un statut (à faire, en cours, terminé), une priorité, un responsable, et des dates d'échéance.
+1. **Inscription et connexion** : Intégrer un système d’authentification pour permettre aux utilisateurs de s’inscrire et de se connecter par email.
+2. **Rôles et permissions** :  
+    - Définir différents rôles d'utilisateur (admin, chef de projet, collaborateur) avec des permissions spécifiques.
+    - Ex. : seuls les administrateurs peuvent supprimer des projets.
 
-        Assignation de membres : L’administrateur ou le gestionnaire de projet doit pouvoir ajouter des utilisateurs/membres à un projet ou une tâche spécifique.
+### Suivi du Temps et des Ressources
 
-        Tableau de bord de projet : Un tableau de bord qui présente un aperçu des projets en cours, des tâches assignées et des échéances à venir.
+1. **Suivi du temps** : Permettre à chaque membre d’enregistrer le temps passé sur une tâche ou un projet pour un suivi efficace des efforts.
 
+### Gestion des Tests
 
-Gestion des utilisateurs
+1. **Création de cas de tests** : Développer et documenter des cas de test pour les fonctionnalités principales.
+2. **Exécution des tests** : Permettre l'exécution et le suivi des tests réalisés.
+3. **Suivi des résultats des tests** : Centraliser les résultats de tests, incluant les succès et les échecs.
+4. **Intégration avec un outil de gestion des bugs** : Intégrer un outil permettant de relier les échecs de tests à des bugs pour une meilleure gestion des erreurs.
 
-Inscription et connexion : Un système d’authentification pour que les utilisateurs puissent s’inscrire et se connecter avec leur email .
+### Gestion des Issues
 
-Rôles et permissions : Définir différents rôles (ex. : admin, chef de projet, collaborateur) avec des droits d’accès spécifiques. Par exemple, seuls les administrateurs peuvent supprimer des projets.
+1. **Création et édition d'issues** :  
+    - Ajouter des bugs, des améliorations et des demandes de fonctionnalités.
+2. **Classification des issues** : Organiser les issues par type, priorité et statut.
+3. **Attribution des issues** : Permettre l'assignation des issues aux membres de l’équipe.
+4. **Historique des modifications** : Suivre les changements apportés aux issues.
+5. **Intégration avec un suivi des versions** : Lier les issues aux versions pour améliorer le suivi des résolutions.
 
+### Gestion des Releases
 
-Suivi du temps et des ressources
+1. **Planification des releases** : Planifier les versions à publier en fonction des priorités et des deadlines.
+2. **Définition du contenu** : Associer à chaque release les issues et les tâches qui en font partie.
+3. **Suivi de l'avancement** : Suivre le progrès des releases en cours.
+4. **Publication des releases** : Publier les versions une fois prêtes.
+5. **Notes de version** : Documenter les modifications apportées dans chaque release avec des notes détaillées.
 
-Suivi du temps : Chaque membre peut enregistrer le temps passé sur une tâche ou un projet pour un meilleur suivi des efforts.
+---
 
+## Besoins Non Fonctionnels
 
-Les besoins non fonctionnel ;
-
-    Performance : Le système doit répondre rapidement aux requêtes utilisateur, même avec un grand nombre de projets et de tâches.
-
-    Utilisabilité : L'interface utilisateur doit être intuitive et facile à prendre en main, même pour les utilisateurs non techniques.
-
-
-    Maintenabilité : Le code source doit être bien structuré et documenté pour faciliter les mises à jour et les évolutions futures.
-
-    Gestion des accès : Les utilisateurs doivent avoir des niveaux d'accès appropriés et ne pouvoir voir ou modifier que ce qui leur est autorisé selon leur rôle.
-
-    Guides et tutoriels : Prévoir des tutoriels ou une aide en ligne pour guider les utilisateurs dans l’utilisation des fonctionnalités principales.
-
-    Protection des données : Les données sensibles (comme les informations sur les projets et les utilisateurs) , et le site doit utiliser des pratiques de sécurité standard (HTTPS, protection des mots de passe, etc.).
+1. **Performance** : Assurer des réponses rapides, même avec un grand volume de projets, tâches, et utilisateurs.
+2. **Utilisabilité** : Offrir une interface intuitive, facilitant la prise en main par des utilisateurs non techniques.
+3. **Maintenabilité** : Structurer et documenter le code pour en faciliter la maintenance et l’évolution future.
+4. **Gestion des accès** : Appliquer un contrôle d’accès basé sur les rôles, garantissant que les utilisateurs ne puissent voir ou modifier que ce qui leur est autorisé.
+5. **Guides et tutoriels** : Prévoir des tutoriels intégrés ou de l’aide en ligne pour faciliter l’utilisation des fonctionnalités principales.
+6. **Protection des données** : Protéger les données sensibles (utilisateurs, projets) en utilisant des pratiques de sécurité standard (HTTPS, stockage sécurisé des mots de passe, etc.). 
