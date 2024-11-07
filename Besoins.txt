@@ -1,56 +1,105 @@
-## Besoins Fonctionnels
+# Besoins Fonctionnels et Non Fonctionnels avec Priorité
 
-### Gestion des Projets
+## Gestion des Projets
 
 1. **Création de projet** : Permettre aux utilisateurs de créer un projet avec les informations essentielles (titre, description, dates de début/fin, priorités).
+   - **Priorité** : Haute
+
 2. **Suivi des tâches** :
    - 2.1. Ajouter, modifier et supprimer des tâches associées à un projet.
+     - **Priorité** : Haute
    - 2.2. Attribuer à chaque tâche un statut (à faire, en cours, terminé), une priorité, un responsable et des dates d'échéance.
-3. **Assignation de membres** : Autoriser les administrateurs ou les gestionnaires de projet à assigner des membres à des projets ou des tâches spécifiques.
-4. **Tableau de bord de projet** : Présenter une vue d’ensemble des projets en cours, des tâches assignées et des échéances à venir.
+     - **Priorité** : Haute
 
-### Gestion des Utilisateurs
+3. **Assignation de membres** : Autoriser les administrateurs ou les gestionnaires de projet à assigner des membres à des projets ou des tâches spécifiques.
+   - **Priorité** : Moyenne
+
+4. **Tableau de bord de projet** : Présenter une vue d’ensemble des projets en cours, des tâches assignées et des échéances à venir.
+   - **Priorité** : Haute
+
+## Gestion des Utilisateurs
 
 5. **Inscription et connexion** : Intégrer un système d’authentification pour permettre aux utilisateurs de s’inscrire et de se connecter par email.
+   - **Priorité** : Haute
+
 6. **Rôles et permissions** :
    - 6.1. Définir différents rôles d'utilisateur (admin, chef de projet, collaborateur) avec des permissions spécifiques.
+     - **Priorité** : Haute
    - 6.2. Ex. : seuls les administrateurs peuvent supprimer des projets.
+     - **Priorité** : Moyenne
 
-### Suivi du Temps et des Ressources
+## Suivi du Temps et des Ressources
 
 7. **Suivi du temps** : Permettre à chaque membre d’enregistrer le temps passé sur une tâche ou un projet pour un suivi efficace des efforts.
+   - **Priorité** : Moyenne
 
-### Gestion des Tests
+## Gestion des Tests
 
 8. **Création de cas de tests** : Développer et documenter des cas de test pour les fonctionnalités principales.
-9. **Exécution des tests** : Permettre l'exécution et le suivi des tests réalisés.
-10. **Suivi des résultats des tests** : Centraliser les résultats de tests, incluant les succès et les échecs.
-11. **Intégration avec un outil de gestion des bugs** : Intégrer un outil permettant de relier les échecs de tests à des bugs pour une meilleure gestion des erreurs.
+   - **Priorité** : Basse
 
-### Gestion des Issues
+9. **Exécution des tests** : Permettre l'exécution et le suivi des tests réalisés.
+   - **Priorité** : Basse
+
+10. **Suivi des résultats des tests** : Centraliser les résultats de tests, incluant les succès et les échecs.
+    - **Priorité** : Basse
+
+11. **Intégration avec un outil de gestion des bugs** : Intégrer un outil permettant de relier les échecs de tests à des bugs pour une meilleure gestion des erreurs.
+    - **Priorité** : Moyenne
+
+## Gestion des Issues
 
 12. **Création et édition d'issues** :
     - 12.1. Ajouter des bugs, des améliorations et des demandes de fonctionnalités.
-13. **Classification des issues** : Organiser les issues par type, priorité et statut.
-14. **Attribution des issues** : Permettre l'assignation des issues aux membres de l’équipe.
-15. **Historique des modifications** : Suivre les changements apportés aux issues.
-16. **Intégration avec un suivi des versions** : Lier les issues aux versions pour améliorer le suivi des résolutions.
+      - **Priorité** : Haute
 
-### Gestion des Releases
+13. **Classification des issues** : Organiser les issues par type, priorité et statut.
+    - **Priorité** : Moyenne
+
+14. **Attribution des issues** : Permettre l'assignation des issues aux membres de l’équipe.
+    - **Priorité** : Moyenne
+
+15. **Historique des modifications** : Suivre les changements apportés aux issues.
+    - **Priorité** : Basse
+
+16. **Intégration avec un suivi des versions** : Lier les issues aux versions pour améliorer le suivi des résolutions.
+    - **Priorité** : Basse
+
+## Gestion des Releases
 
 17. **Planification des releases** : Planifier les versions à publier en fonction des priorités et des deadlines.
+    - **Priorité** : Moyenne
+
 18. **Définition du contenu** : Associer à chaque release les issues et les tâches qui en font partie.
+    - **Priorité** : Moyenne
+
 19. **Suivi de l'avancement** : Suivre le progrès des releases en cours.
+    - **Priorité** : Moyenne
+
 20. **Publication des releases** : Publier les versions une fois prêtes.
+    - **Priorité** : Basse
+
 21. **Notes de version** : Documenter les modifications apportées dans chaque release avec des notes détaillées.
+    - **Priorité** : Basse
 
 ---
 
 ## Besoins Non Fonctionnels
 
 22. **Performance** : Assurer des réponses rapides, même avec un grand volume de projets, tâches, et utilisateurs.
+    - **Priorité** : Haute
+
 23. **Utilisabilité** : Offrir une interface intuitive, facilitant la prise en main par des utilisateurs non techniques.
+    - **Priorité** : Haute
+
 24. **Maintenabilité** : Structurer et documenter le code pour en faciliter la maintenance et l’évolution future.
+    - **Priorité** : Moyenne
+
 25. **Gestion des accès** : Appliquer un contrôle d’accès basé sur les rôles, garantissant que les utilisateurs ne puissent voir ou modifier que ce qui leur est autorisé.
+    - **Priorité** : Haute
+
 26. **Guides et tutoriels** : Prévoir des tutoriels intégrés ou de l’aide en ligne pour faciliter l’utilisation des fonctionnalités principales.
+    - **Priorité** : Basse
+
 27. **Protection des données** : Protéger les données sensibles (utilisateurs, projets) en utilisant des pratiques de sécurité standard (HTTPS, stockage sécurisé des mots de passe, etc.).
+    - **Priorité** : Haute

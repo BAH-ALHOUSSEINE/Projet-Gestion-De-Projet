@@ -1,0 +1,26 @@
+Structure imaginé pour notre première ébauche
+
+project-management/
+├── backend/                   # Serveur et API
+│   ├── controllers/           # Contrôleurs pour la logique métier
+│   ├── models/                # Modèles de données (Mongoose pour MongoDB)
+│   ├── routes/                # Routes de l'API REST
+│   ├── services/              # Services pour la logique métier partagée
+│   ├── config/                # Configuration de la base de données et autres
+│   ├── utils/                 # Utilitaires, middlewares et helpers
+│   ├── app.js                 # Point d'entrée du backend (Express)
+│   └── .env                   # Fichier d'environnement (variables comme URI MongoDB)
+├── frontend/                  # Application Angular
+│   ├── src/
+│   │   ├── app/               # Composants, services et modules Angular
+│   │   │   ├── components/    # Composants individuels (UI)
+│   │   │   │   ├── project/   # Composants spécifiques pour la gestion des projets
+│   │   │   │   ├── task/      # Composants spécifiques pour la gestion des tâches
+│   │   │   │   └── user/      # Composants spécifiques pour la gestion des utilisateurs
+│   │   │   ├── services/      # Services pour gérer les appels API et la logique métier
+│   │   │   ├── models/        # Modèles TypeScript pour les données
+│   │   │   ├── guards/        # Gardiens d'authentification et autorisation
+│   │   │   └── app.module.ts  # Module principal de l'application
+│   │   ├── assets/            # Assets comme les images et styles globaux
+│   │   └── environments/      # Configurations pour différents environnements (dev, prod)
+└── README.md                  # Documentation du projet
