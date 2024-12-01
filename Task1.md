@@ -19,13 +19,13 @@
 
 ### Objectif 3 : Concevoir les maquettes de l'application
 - **Tâche 3.1** : Créer les maquettes des pages principales sur Figma, Canvas ou Adobe  
-   Terminé : Les maquettes des pages principales (page d'accueil, choix du projet, liste des tâches, liste des membres) ont été réalisées sur Figma et validées par l'équipe.
+   Terminé : Les maquettes des pages principales (page d'accueil, choix du projet, liste des tâches, liste des membres) ont été réalisées sur Canva et validées par l'équipe.
 
 ---
 
 ### Objectif 4 : Mettre en place un outil de gestion de projet
 - **Tâche 4.1** : Créer un espace de gestion de projet sur Monday, Jira ou Trello  
-   Terminé : Un espace de gestion de projet a été configuré et est opérationnel sur Trello.
+   Terminé : Un espace de gestion de projet a été configuré et est opérationnel sur Jira.
 
 ---
 
