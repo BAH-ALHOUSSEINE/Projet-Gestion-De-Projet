@@ -22,12 +22,3 @@
 * US11 : **En tant que** utilisateur, **je souhaite** travailler sur une interface agréable **afin** de ne pas perdre trop de temps à apprendre à utiliser l'outil.
   
 * US11 : **En tant que** utilisateur, **je souhaite** que mes données soient protégés **afin** d'éviter la fuite de données confidentielles.
-
-
-
-
-Quels rôles ont les utilisateurs ?
-- propriétaire d'un projet ?
-- administrateur d'un projet ?
-  est-ce que l'utilisateur qui est créer un projet est automatiquement administrateur du projet ? propriétaire du projet ? chef de projet ?
-- collaborateur ?
