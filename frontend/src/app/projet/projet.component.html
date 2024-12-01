@@ -1,1 +1,22 @@
-<p>projet works!</p>
+<div style="display: flex; flex-direction: row;">
+  <div class="viewing-project-container" [ngStyle]="{'flex': isProjectCreationPanelOpen ? '3' : '4'}">
+    <p class="title">Vos Projets</p>
+    <div class="projects-container vertical-scrollable">
+      <div class="project-card" *ngFor="let project of projects" (click)="project._id && goToProjectDetail(project._id)">
+        {{ project.nom_projet }}
+      </div>
+      <div class="project-card create-project-card" (click)="openProjectCreationPanel()" *ngIf="!isProjectCreationPanelOpen" >
+        <span>+</span>
+      </div>
+    </div>
+  </div>
+
+  <app-create-project-form 
+  *ngIf="isProjectCreationPanelOpen" 
+  [ngStyle]="{'flex': isProjectCreationPanelOpen ? '1' : '1'}"
+  (projectCreated)="onProjectCreated($event)"
+  (formCancel)="closeProjectCreationPanel()"
+  ></app-create-project-form>
+
+    
+</div>

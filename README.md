@@ -1,19 +1,27 @@
-# Projet-Gestion-De-Projet-grp10
-Dépôt de release de notre logiciel de gestion de projet
+# Projet-Gestion-De-Projet-Dev
+Partie dev de notre logiciel de gestion de projet
 
-# Pour lancer l'application
-# Backend
-Depuis le dossier Backend/
+## Pré-requis pour le déploiement de l'application
+Gestionnaire de paquets npm 
 
-1. exécutez la commande ```npm install```
-2. exécutez la commande ```node server.js```
+# Côté Backend 
+    - Node.js (version à préciser)
+    - Express.js
+    - MongoDB 
 
-l'application back se lance sur localhost:3000
+# Côté Frontend 
+    - @angular/cli
 
-# Frontend
-Depuis le dossier frontend/ 
 
-1. exécutez la commande ```npm install```
-2. exécutez la commande ```ng serve```
+## Déploiement de l'application
+# Dans Backend/
+    1. systemctl start mongod
+    2. ``` node server.js ```
 
-l'application front se lance sur localhost:4200
+    -> localhost:3000
+
+# Dans frontend/
+    ``` ng serve ```
+
+    -> localhost:4200
+
