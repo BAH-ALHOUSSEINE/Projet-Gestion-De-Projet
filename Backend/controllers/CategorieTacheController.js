@@ -1,7 +1,14 @@
 const Project = require('../models/Project');
 const CategorieTache = require('../models/CategorieTache')
 
-// Ajouter une catégorie de tâches à un sprint
+  /**
+     * Creates a new instance of CategorieTache.
+     *
+     * @param {Object} nouvelleCategorie - The new category object.
+     * @param {string} nouvelleCategorie.nom - The name of the category.
+     * @param {Array} nouvelleCategorie.taches - The tasks associated with the category.
+     */
+
 exports.addCategorieToSprint = async (req, res) => {
   try {
     const { projetId, sprintId } = req.params; // Extraire les paramètres
@@ -19,6 +26,10 @@ exports.addCategorieToSprint = async (req, res) => {
       return res.status(404).json({ message: 'Sprint non trouvé' });
     }
 
+    if(!nom){
+      throw new Error('Le nom de la catégorie est requis');
+    }
+    
     // Créer une nouvelle catégorie
     const nouvelleCategorie = new CategorieTache({
       nom,
@@ -28,10 +39,14 @@ exports.addCategorieToSprint = async (req, res) => {
     // Ajouter la catégorie au sprint
     sprint.categorie_tache.push(nouvelleCategorie);
 
-    // Sauvegarder le projet avec les modifications
+    // Sauvegarder le projet avec les modifications (y compris la nouvelle catégorie)
     await projet.save();
 
-    res.status(200).json({ message: 'Catégorie ajoutée avec succès', sprint });
+    // Retourner la catégorie nouvellement créée
+    res.status(200).json({
+     message:'Catégorie ajoutée avec succès', // Retourne l'objet CategorieTache complet
+     categorie: nouvelleCategorie
+    });
   } catch (error) {
     console.error('Erreur lors de l\'ajout de la catégorie:', error);
     res.status(500).json({ message: 'Erreur serveur lors de l\'ajout de la catégorie', error });

@@ -1,4 +1,5 @@
 <div style="display: flex;flex-direction: row;flex: 1;">
+  <p *ngIf="tache_view">TACHE VUE</p>
   <div class="task-container" style="display: flex;flex-direction: column;padding: 30px;   /* Aligne le dropdown à droite */"  [ngStyle]="{'flex': sidePanel ? '3' : '4'}">
     <!-- <p>{{information}}</p> -->
     <div style="display: flex; flex-direction: row; align-items: center; justify-content: end;gap: 10px">
@@ -15,13 +16,24 @@
 
     <div *ngFor="let s of selectedSprint.categorie_tache; let i = index">
       <button 
-        (click)="toggleCategorie(i)" 
+        (click)="toggleCategorie(s)" 
         class="categorie-button"
-        [class.active]="selectedCategories.includes(i)">
+        [class.active]="selectedCategories.includes(s)">
         {{ s.nom }}
       </button>
-      <div *ngIf="selectedCategories.includes(i)" class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec...</p>
+      <div *ngIf="selectedCategories.includes(s)" class="content" style="display:flex;flex-direction: column;align-items: start;">
+        
+        <div style="display: flex; justify-content: end;align-items: start; width: 80%; flex-direction: row;" 
+        *ngFor="let tache of taskOfCategorie(s)">
+         <button class="task-button"         [ngStyle]="{'color': statusColor(tache.status)}"
+         [class.current]="tache._id === current_tache._id"  (click)="setCurrentTask(tache,i)" 
+         >{{tache.description}}</button>
+         <button (click)="deleteTask(tache,i)">X</button>
+        </div>
+        
+        
+        
+        <button class="add-task" *ngIf="!tache_creation"   (click)="openTacheCreation(i)">Nouvelle Tâche</button>
       </div>
     </div>
 
@@ -42,9 +54,28 @@
   (formCancel)="closeCategorieCreation()"
   (categorieCreated)="handleCategorieCreated($event)"
   [project]="projectMock"
-  [sprint]="selectedSprint"
-  >
+  [sprint]="selectedSprint"></app-create-categorie-form>
 
-  </app-create-categorie-form>
+
+  <app-create-tache-form
+  [project]="projectMock"
+  [sprint]="selectedSprint"
+  [categorie]="getIdcategorie()"
+  *ngIf="tache_creation"
+  [ngStyle]="{'flex': tache_creation ? '1' : '1'}"
+  (formCancel)="closeAll()"
+  (tacheCreated)="handleTacheCreated($event)"
+  ></app-create-tache-form>
+
+  <app-view-tache
+  [project]="projectMock"
+  [sprint]="selectedSprint"
+  [categorie]="getIdcategorie()"
+  [task]="current_tache"
+  *ngIf="tache_view"
+  [ngStyle]="{'flex': tache_view ? '1' : '1'}"
+  (formCancel)="closeAll()"
+  (taskUpdated)="handleTaskUpdated($event)">  ></app-view-tache>
+
 
 </div>

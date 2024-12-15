@@ -23,7 +23,10 @@ import { PopupadduserComponent } from './popupadduser/popupadduser.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { CreateCategorieFormComponent } from './forms/create-categorie-form/create-categorie-form.component'; 
+import { CreateCategorieFormComponent } from './forms/create-categorie-form/create-categorie-form.component';
+import { CreateTacheFormComponent } from './forms/create-tache-form/create-tache-form.component';
+import { ViewTacheComponent } from './forms/view-tache/view-tache.component'; 
+import { DatePipe } from '@angular/common';
 
 
 
@@ -31,6 +34,7 @@ import { CreateCategorieFormComponent } from './forms/create-categorie-form/crea
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     TacheComponent,
     ProjetComponent,
@@ -45,8 +49,9 @@ import { CreateCategorieFormComponent } from './forms/create-categorie-form/crea
     DynamicFormComponent,
     CreateProjectFormComponent,
     CreateSprintFormComponent,
-    PopupadduserComponent,
-    CreateCategorieFormComponent
+    CreateCategorieFormComponent,
+    CreateTacheFormComponent,
+    ViewTacheComponent
 
   ],
   imports: [
@@ -62,6 +67,7 @@ import { CreateCategorieFormComponent } from './forms/create-categorie-form/crea
   ],
   providers: [
     provideClientHydration(),
+    [DatePipe],
     provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]

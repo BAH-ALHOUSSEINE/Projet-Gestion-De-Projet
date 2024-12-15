@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import {Projet} from '../models/projet'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, catchError, Observable, of } from 'rxjs';
-import { AuthGuard } from '../guards/auth.guard';
 import { Sprint } from '../models/sprint';
 import { CategorieTache } from '../models/categorie-tache';
+import { Tache } from '../models/tache';
 
 
 const httpOptions = {
@@ -48,6 +47,19 @@ export class SprintService {
       );
     }
 
+     
+    addtache(projetId : string | undefined  , idsprint : string  | undefined ,idcategorie : string  | undefined ,  tache : Tache | undefined ): Observable<any> {
+      const url = `${this.baseURL}${projetId}/sprint/${idsprint}/categorie/${idcategorie}/tache`;  // Construction de l'URL
+      console.log("URL de la requête:", url);
+  
+        console.log("données envoyées : " , tache)
+      return this.http.post(url, tache, httpOptions).pipe(
+        catchError(error => {
+          console.error('Erreur lors de l\'ajout du sprint', error);
+          return of({ success: false, message: 'Erreur lors de l\'ajout du sprint' });
+        })
+      );
+    }
 
 
   }

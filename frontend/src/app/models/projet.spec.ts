@@ -1,6 +1,7 @@
 import { Projet } from './projet';
+import { User } from './user';
 
-describe('Projet', () => {
+describe('ProjetServices', () => {
   it('should create an instance', () => {
     expect(new Projet()).toBeTruthy();
   });
@@ -21,29 +22,29 @@ describe('Projet', () => {
     const projectData = {
       _id: '123',
       nom_projet: 'projet',
-      id_admin: 'admin',
+      id_admin: {_id:"admin"},
       type_projet: 'type',
       description_projet: 'description',
       date_debut: new Date(),
       date_fin: new Date(),
-      membres: ['membre1', 'membre2']
+      membres: [new User, new User]
     };
     const projet = Projet.fromData(projectData);
     expect(projet._id).toBe('123');
     expect(projet.nom_projet).toBe('projet');
-    expect(projet.id_admin).toBe('admin');
+    expect(projet.id_admin).toBe("admin");
     expect(projet.type_projet).toBe('type');
     expect(projet.description_projet).toBe('description');
     expect(projet.date_debut).toEqual(new Date(projectData.date_debut));
     expect(projet.date_fin).toEqual(new Date(projectData.date_fin));
-    expect(projet.membres).toEqual(['membre1', 'membre2']);
+    expect(projet.membres).toEqual([new User, new User]);
   });
 
   it('should set membre to [] when membre is undefined or invalid', () => {
     const projectData = {
       _id: '123',
       nom_projet: 'projet',
-      id_admin: 'admin',
+      id_admin: {_id:"admin"},
       type_projet: 'type',
       description_projet: 'description',
       date_debut: new Date(),
@@ -63,7 +64,7 @@ describe('Projet', () => {
     const projectData2 = {
       _id: '123',
       nom_projet: 'projet',
-      id_admin: 'admin',
+      id_admin: {_id:"admin"},
       type_projet: 'type',
       description_projet: 'description',
       date_debut: new Date(),
@@ -85,7 +86,7 @@ describe('Projet', () => {
     const projectData = {
       _id: '123',
       nom_projet: 'projet',
-      id_admin: 'admin',
+      id_admin: {_id:"admin"},
       type_projet: 'type',
       description_projet: 'description',
       date_debut: new Date(),
