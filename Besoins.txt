@@ -98,7 +98,7 @@
 25. **Gestion des accès** : Appliquer un contrôle d’accès basé sur les rôles, garantissant que les utilisateurs ne puissent voir ou modifier que ce qui leur est autorisé.
     - **Priorité** : Haute
 
-26. **Guides et tutoriels** : Prévoir des tutoriels intégrés ou de l’aide en ligne pour faciliter l’utilisation des fonctionnalités principales.
+26. **Guides et tutoriels** : Prévoir des tutoriels intégrés pour faciliter l’utilisation des fonctionnalités principales.
     - **Priorité** : Basse
 
 27. **Protection des données** : Protéger les données sensibles (utilisateurs, projets) en utilisant des pratiques de sécurité standard (HTTPS, stockage sécurisé des mots de passe, etc.).

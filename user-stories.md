@@ -18,7 +18,7 @@
 * US16 : **En tant que** collaborateur d'un projet, **je souhaite** pouvoir voir les membres d'un projet ainsi que leur rôle **afin** ??
 
 *** Non fonctionnels ***
-* US11 : **En tant que** utilisateur, **je souhaite** pouvoir naviger rapidement dans l'application **afin** d'améliorer l'efficacité de mon travail.
-* US11 : **En tant que** utilisateur, **je souhaite** travailler sur une interface agréable **afin** de ne pas perdre trop de temps à apprendre à utiliser l'outil.
+* US17 : **En tant que** utilisateur, **je souhaite** pouvoir naviger rapidement dans l'application **afin** d'améliorer l'efficacité de mon travail.
+* US18 : **En tant que** utilisateur, **je souhaite** travailler sur une interface agréable **afin** de ne pas perdre trop de temps à apprendre à utiliser l'outil.
   
-* US11 : **En tant que** utilisateur, **je souhaite** que mes données soient protégés **afin** d'éviter la fuite de données confidentielles.
+* US19 : **En tant que** utilisateur, **je souhaite** que mes données soient protégés **afin** d'éviter la fuite de données confidentielles.
